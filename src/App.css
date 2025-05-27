@@ -1,0 +1,280 @@
+/* Reset & Base */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f6f8fc;
+  overflow: hidden; /* No scroll */
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: linear-gradient(to bottom, #f7faff, #edf3fc);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #e2e8f0;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo-primary {
+  color: #00c2ff;
+}
+
+.logo-secondary {
+  color: #3d3fdb;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  color: #4b5563;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-item.active {
+  color: #3d3fdb;
+  font-weight: bold;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #f6f8fc;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #6b7280;
+}
+
+/* Grid layout */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1.6fr;
+  gap: 20px;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Body Chart */
+.body-chart {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+}
+
+.body-img {
+  width: 200px;
+}
+
+.label-heart, .label-leg {
+  position: absolute;
+  background: #3d3fdb;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.label-heart {
+  top: 10px;
+  right: 10px;
+}
+
+.label-leg {
+  bottom: 10px;
+  left: 10px;
+  background: #00c2ff;
+}
+
+/* Status Cards */
+.status-cards {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.status-card {
+  background: #f4f7fe;
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+.bar {
+  height: 6px;
+  background: #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.bar.red div {
+  background: #ff6b6b;
+  height: 100%;
+}
+
+.bar.green div {
+  background: #34d399;
+  height: 100%;
+}
+
+.bar.orange div {
+  background: #f97316;
+  height: 100%;
+}
+
+/* Schedule */
+.schedule {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.schedule-calendar {
+  margin-bottom: 20px;
+}
+
+.calendar-days {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.calendar-day {
+  text-align: center;
+  font-size: 12px;
+}
+
+.day-time.selected {
+  background: #3d3fdb;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 12px;
+  margin-top: 5px;
+}
+
+.day-time.muted {
+  color: #9ca3af;
+  margin-top: 5px;
+}
+
+/* Appointments */
+.appointment {
+  background: #e0e7ff;
+  padding: 12px 16px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.appointment.dentist {
+  background: #3d3fdb;
+  color: #fff;
+}
+
+.upcoming-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.upcoming-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.upcoming-item {
+  background: #e0e7ff;
+  padding: 10px 14px;
+  border-radius: 15px;
+  font-size: 13px;
+}
+
+/* Activity Graph */
+.activity {
+  background: #f4f7fe;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.activity-graph {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.activity-day {
+  text-align: center;
+  font-size: 10px;
+}
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  height: 40px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.bar.light {
+  background: #00c2ff;
+  width: 6px;
+  height: 20px;
+  border-radius: 2px;
+}
+
+.bar.dark {
+  background: #3d3fdb;
+  width: 6px;
+  height: 30px;
+  border-radius: 2px;
+}
+
+
+

@@ -1,0 +1,599 @@
+/* Dashboard.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8faff;
+    color: #222;
+  }
+  .dashboard-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9fbff;
+  }
+  
+  /* Main Section */
+  .main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    border-radius: 24px;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .header-right input {
+    padding-left: 30px;
+    position: relative;
+  }
+  
+  .header-right::before {
+    content: "🔍";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+  }
+  
+  .header-right::after {
+    content: "🔔";
+    position: absolute;
+    right: -20px;
+    font-size: 16px;
+  }
+  
+  /* Profile pic + plus icon */
+  .header-right img {
+    position: relative;
+  }
+  
+  .header-right img::after {
+    content: "+";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #5a8dee;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 2px 5px;
+  }
+  .body-chart {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    flex-wrap: nowrap; /* Keep everything side by side */
+  }
+  
+  .image-container {
+    width: 450px; /* Fixed size */
+    flex-shrink: 0; /* Prevent shrinking */
+  }
+  
+  .body-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  .status-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  
+  .label-heart, .label-leg {
+    position: absolute;
+    background: #4b4cfc;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .label-heart {
+    top: 20px;
+    right: 20px;
+  }
+  
+  .label-leg {
+    bottom: 40px;
+    left: 20px;
+  }
+  
+  /* Zoom emoji */
+  .image-container::after {
+    content: "🔍";
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 16px;
+  }
+  
+  /* Status cards */
+  .status-cards {
+    margin-top: 20px;
+  }
+  
+  .status-card {
+    background: #ffffff;
+    padding: 10px 14px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    position: relative;
+  }
+  
+  .status-card::before {
+    position: absolute;
+    left: -24px;
+    font-size: 18px;
+  }
+  
+  .status-card:nth-child(1)::before {
+    content: "🫁";
+  }
+  .status-card:nth-child(2)::before {
+    content: "🦷";
+  }
+  .status-card:nth-child(3)::before {
+    content: "🦴";
+  }
+  
+  .bar {
+    height: 6px;
+    background: #eee;
+    border-radius: 6px;
+    margin-top: 4px;
+    overflow: hidden;
+  }
+  
+  .bar div {
+    height: 100%;
+    border-radius: 6px;
+  }
+  
+  .bar.red div {
+    background: #ff6b6b;
+  }
+  .bar.green div {
+    background: #38d39f;
+  }
+  .bar.orange div {
+    background: #fbb13c;
+  }
+  
+  .status-card::after {
+    content: "Date: 26 Okt 2021";
+    font-size: 11px;
+    color: #999;
+    display: block;
+    margin-top: 4px;
+  }
+  
+  .details-text {
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: right;
+    color: #555;
+    cursor: pointer;
+  }
+  .appointment.dentist::before {
+    content: "🦷";
+    margin-right: 4px;
+  }
+  .appointment::before {
+    content: "💪";
+    margin-right: 4px;
+  }
+  
+  .upcoming-item:nth-child(1)::before {
+    content: "✒️";
+    margin-right: 4px;
+  }
+  .upcoming-item:nth-child(2)::before {
+    content: "👁️";
+    margin-right: 4px;
+  }
+  .upcoming-item:nth-child(3)::before {
+    content: "❤️";
+    margin-right: 4px;
+  }
+  .upcoming-item:nth-child(4)::before {
+    content: "🧠";
+    margin-right: 4px;
+  }
+  .body-chart {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .image-container {
+    width: 500px; /* Fixed big size */
+    min-width: 500px;
+    max-width: 500px;
+    flex-shrink: 0; /* NEVER SHRINK */
+    position: relative;
+  }
+  
+  .body-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  
+  .label-heart,
+  .label-leg {
+    position: absolute;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 14px;
+    color: white;
+    background-color: #5454d4;
+  }
+  
+  .label-heart {
+    top: 20px;
+    left: 60%;
+    transform: translateX(-50%);
+  }
+  
+  .label-leg {
+    bottom: 30px;
+    left: 30%;
+    transform: translateX(-50%);
+    background-color: #08c6ab;
+  }
+  
+
+  .status-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1; /* Expand and take remaining space */
+  }
+  
+  .status-card {
+    background: #f3f6fc;
+    padding: 16px 22px;
+    border-radius: 14px;
+    font-size: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    width: 100%;
+  }
+  
+  .bar {
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    margin-top: 8px;
+    overflow: hidden;
+  }
+  
+  .bar.red div {
+    width: 70%;
+    height: 100%;
+    background: #ff6b6b;
+  }
+  
+  .bar.green div {
+    width: 80%;
+    height: 100%;
+    background: #38d39f;
+  }
+  
+  .bar.orange div {
+    width: 65%;
+    height: 100%;
+    background: #fbb13c;
+  }
+  
+  
+  
+  .dashboard-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    background: #f3f6fc;
+    padding: 24px 16px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 24px;
+  }
+  
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  .logo-primary {
+    color: #08c6ab;
+  }
+  .logo-secondary {
+    color: #5454d4;
+  }
+  
+  .nav-item {
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .nav-item.active,
+  .nav-item:hover {
+    background-color: #fff;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Main Content */
+  .main {
+    flex: 1;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  /* Body Image and Stats */
+  .body-chart {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .image-container {
+    position: relative;
+    flex: 1;
+  }
+  
+  .body-img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+  }
+  
+  .label-heart,
+  .label-leg {
+    position: absolute;
+    background: #5454d4;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .label-heart {
+    top: 55px;
+    left: 60%;
+    transform: translateX(-50%);
+  }
+  .label-leg {
+    bottom: 30px;
+    left: 30%;
+    transform: translateX(-50%);
+    background: #08c6ab;
+  }
+  
+  .status-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 0 0 180px;
+  }
+  
+  .status-card {
+    background: #f3f6fc;
+    padding: 16px 20px;
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .bar {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    margin-top: 4px;
+  }
+  .bar > div {
+    height: 100%;
+    border-radius: 8px;
+  }
+  .bar.red > div {
+    background: #ff6b6b;
+  }
+  .bar.green > div {
+    background: #32d296;
+  }
+  .bar.orange > div {
+    background: #f4a261;
+  }
+  
+  /* Activity Section */
+  .activity {
+    background: white;
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+  .activity-graph {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+  .activity-day {
+    text-align: center;
+    font-size: 12px;
+  }
+  .bars {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 6px;
+  }
+  .bar.light {
+    width: 2px;
+    height: 20px;
+    background: #a3c9f1;
+    border-radius: 2px;
+    margin: auto;
+  }
+  .bar.dark {
+    width: 2px;
+    height: 40px;
+    background: #5454d4;
+    border-radius: 2px;
+    margin: auto;
+  }
+  
+  /* Right Panel */
+  .schedule {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+  }
+  
+  .schedule-calendar {
+    margin-bottom: 20px;
+  }
+  
+  .calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    font-size: 12px;
+  }
+  
+  .calendar-day {
+    text-align: center;
+  }
+  
+  .day-time {
+    margin-top: 6px;
+    padding: 4px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .day-time.selected {
+    background: #5454d4;
+    color: white;
+    font-weight: bold;
+  }
+  .day-time.muted {
+    color: #aaa;
+  }
+  
+  .appointment {
+    background: #e7e9f6;
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin-top: 12px;
+  }
+  .appointment.dentist {
+    background: #5454d4;
+    color: white;
+  }
+  
+  .upcoming-title {
+    font-weight: bold;
+    font-size: 15px;
+    margin: 14px 0 6px;
+  }
+  
+  .upcoming-grid {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .upcoming-item {
+    flex: 1;
+    min-width: 140px;
+    background: #f3f6fc;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .main-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .status-cards {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+  
